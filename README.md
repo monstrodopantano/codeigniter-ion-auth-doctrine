@@ -27,6 +27,7 @@ $ composer install
 * Change file /path/to/codeigniter/application/autoload.php
 
 Doctrine 2 ORM and About XSS cleaning is that it should only be applied to output, as opposed to input data.
+
 ~~~php
 <?php
 $autoload['libraries'] = array('doctrine');
@@ -42,7 +43,7 @@ $autoload['helper'] = array('security');
 $ cd /path/to/codeigniter/
 $ vendor/bin/doctrine --ansi orm:generate-entities --generate-annotations=true /path/to/codeigniter/application
 
-If sucess return generating code entity
+If success return generating code entity
 Processing entity "models\entities\Groups"
 Processing entity "models\entities\Users"
 Processing entity "models\entities\Users_groups"
@@ -50,15 +51,17 @@ Processing entity "models\entities\Users_groups"
 Entity classes generated to/path/to/codeigniter/application
 ```
 
+## Usage
+
 ```bash
-Usage
+In the package you will find example usage code in the controllers and views folders.
+The example code isn't the most beautiful code you'll ever see but it'll show you how to use the library and
+it's nice and generic so it doesn't require a MY_controller or anything else.
 
-In the package you will find example usage code in the controllers and views folders. The example code isn't the most beautiful code you'll ever see but it'll show you how to use the library and it's nice and generic so it doesn't require a MY_controller or anything else.
 Default Login
-
 Username: admin@admin.com Password: password
 
-Information additional [Ion Auth 2](https://github.com/benedmunds/CodeIgniter-Ion-Auth#usage);
+Information additional [Ion Auth 2](https://github.com/benedmunds/CodeIgniter-Ion-Auth#usage)
 ```
 
 ## Reference
