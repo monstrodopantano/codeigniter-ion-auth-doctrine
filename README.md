@@ -35,6 +35,7 @@ $autoload['helper'] = array('security');
 ~~~
 
 * Create you database and set values file in /path/to/codeigniter/application/config/database.php
+* Then just run the appropriate SQL file /path/to/codeigniter/application/sql.
 * Create Entity Ion Auth with Doctrine 2 ORM
 
 ```bash
@@ -47,6 +48,17 @@ Processing entity "models\entities\Users"
 Processing entity "models\entities\Users_groups"
 
 Entity classes generated to/path/to/codeigniter/application
+```
+
+```bash
+Usage
+
+In the package you will find example usage code in the controllers and views folders. The example code isn't the most beautiful code you'll ever see but it'll show you how to use the library and it's nice and generic so it doesn't require a MY_controller or anything else.
+Default Login
+
+Username: admin@admin.com Password: password
+
+Information additional [Ion Auth 2](https://github.com/benedmunds/CodeIgniter-Ion-Auth#usage);
 ```
 
 ## Reference
