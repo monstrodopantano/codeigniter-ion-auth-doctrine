@@ -1,5 +1,5 @@
 # Codeigniter Ion Auth Doctrine
-Adaptation project CodeIgniter-Ion-Auth-2 by autor: Ben Edmunds from framework Doctrine 2 ORM
+Adaptation project CodeIgniter-Ion-Auth-2 by author: Ben Edmunds from framework Doctrine 2 ORM
 
 ## Requirements
 
