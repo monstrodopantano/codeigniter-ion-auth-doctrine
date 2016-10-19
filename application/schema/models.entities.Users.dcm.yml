@@ -1,0 +1,75 @@
+models\entities\Users:
+    type: entity
+    table: users
+    indexes:
+        logins_index:
+            columns: [ username, email ]
+    fields:
+        id:
+            id: true
+            type: integer
+            generator:
+                strategy: IDENTITY
+        ip_address:
+            type: string
+            length: 15
+        username:
+            type: string
+            length: 100
+        password:
+            type: string
+            length: 255
+        salt:
+            type: string
+            length: 40
+            nullable: true
+        email:
+            type: string
+            length: 100
+        activation_code:
+            type: string
+            length: 40
+            nullable: true
+        forgotten_password_code:
+            type: string
+            length: 40
+            nullable: true
+        forgotten_password_time:
+            type: integer
+            nullable: true
+        remember_code:
+            type: string
+            length: 40
+            nullable: true
+        created_on:
+            type: integer
+        last_login:
+            type: integer
+            nullable: true
+        active:
+            type: integer
+            nullable: true
+        first_name:
+            type: string
+            length: 50
+            nullable: true
+        last_name:
+            type: string
+            length: 50
+            nullable: true
+        company:
+            type: string
+            length: 100
+            nullable: true
+        phone:
+            type: string
+            length: 20
+            nullable: true
+    oneToMany:
+        users_groups:
+            targetEntity: models\entities\Users_groups
+            mappedBy: users
+            cascade: ["persist", "merge"]
+    lifecycleCallbacks:
+        prePersist: [ doStuffOnPrePersist, doOtherStuffOnPrePersistToo ]
+        postPersist: [ doStuffOnPostPersist ]

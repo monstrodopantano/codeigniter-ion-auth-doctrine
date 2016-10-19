@@ -1,0 +1,29 @@
+models\entities\Users_groups:
+    type: entity
+    table: users_groups
+    fields:
+        id:
+            id: true
+            type: integer
+            generator:
+                strategy: IDENTITY
+        group_id:
+            type: integer
+        user_id:
+            type: integer
+    manyToOne:
+        groups:
+            targetEntity: models\entities\Groups
+            inversedBy: users_groups
+            joinColumn:
+                name: group_id
+                referencedColumnName: id
+        users:
+            targetEntity: models\entities\Users
+            inversedBy: users_groups
+            joinColumn:
+                name: user_id
+                referencedColumnName: id
+    lifecycleCallbacks:
+        prePersist: [ doStuffOnPrePersist, doOtherStuffOnPrePersistToo ]
+        postPersist: [ doStuffOnPostPersist ]

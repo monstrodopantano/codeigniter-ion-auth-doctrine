@@ -1,0 +1,28 @@
+models\entities\Groups:
+    type: entity
+    table: groups
+    indexes:
+        name_groups_index:
+            columns: [ name ]
+    fields:
+        id:
+            id: true
+            type: integer
+            generator:
+                strategy: IDENTITY
+        name:
+            type: string
+            length: 20
+            nullable: false
+        description:
+            type: string
+            length: 100
+            nullable: false
+    oneToMany:
+        users_groups:
+            targetEntity: models\entities\Users_groups
+            mappedBy: groups
+            cascade: ["persist", "merge"]
+    lifecycleCallbacks:
+        prePersist: [ doStuffOnPrePersist, doOtherStuffOnPrePersistToo ]
+        postPersist: [ doStuffOnPostPersist ]

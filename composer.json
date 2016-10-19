@@ -1,0 +1,27 @@
+{
+	"description": "The CodeIgniter framework - Ion Auth with Doctrine",
+	"name": "codeigniter/framework - Object-Relational-Mapper for PHP",
+	"type": "project",
+	"homepage": "https://codeigniter.com",
+	"license": "MIT",
+	"support": {
+		"forum": "http://forum.codeigniter.com/",
+		"wiki": "https://github.com/bcit-ci/CodeIgniter/wiki",
+		"irc": "irc://irc.freenode.net/codeigniter",
+		"source": "https://github.com/bcit-ci/CodeIgniter",
+		"homepage-doctrine": "http://www.doctrine-project.org"
+	},
+	"require": {
+		"php": ">=5.2.4",
+        "doctrine/common": "2.5",
+        "doctrine/dbal": "2.5",
+        "doctrine/orm": "2.5",
+        "symfony/yaml": "3.1"
+	},
+	"suggest": {
+		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
+	},
+	"require-dev": {
+		"mikey179/vfsStream": "1.1.*"
+	}
+}
