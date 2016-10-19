@@ -2,7 +2,7 @@
 use Doctrine\ORM\Tools\Console\ConsoleRunner;
 
 // cli-config.php
-define('APPPATH', dirname(__FILE__) . '/CodeIgniter-Ion-Auth/');
+define('APPPATH', dirname(__FILE__) . '/application/');
 define('BASEPATH', APPPATH . '/../system/');
 define('ENVIRONMENT', 'development');
 

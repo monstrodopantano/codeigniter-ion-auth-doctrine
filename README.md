@@ -33,3 +33,14 @@ $autoload['libraries'] = array('doctrine');
 
 $autoload['helper'] = array('security');
 ~~~
+
+* Create Entity Ion Auth with Doctrine 2 ORM
+```bash
+$ cd /path/to/codeigniter/
+$ vendor/bin/doctrine --ansi orm:generate-entities --generate-annotations=true /path/to/codeigniter/application
+
+If sucess return generating code entity
+Processing entity "models\entities\Groups"
+Processing entity "models\entities\Users"
+Processing entity "models\entities\Users_groups"
+```
