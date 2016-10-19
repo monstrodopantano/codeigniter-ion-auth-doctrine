@@ -34,7 +34,9 @@ $autoload['libraries'] = array('doctrine');
 $autoload['helper'] = array('security');
 ~~~
 
+* Create you database and set values file in /path/to/codeigniter/application/config/database.php
 * Create Entity Ion Auth with Doctrine 2 ORM
+
 ```bash
 $ cd /path/to/codeigniter/
 $ vendor/bin/doctrine --ansi orm:generate-entities --generate-annotations=true /path/to/codeigniter/application
@@ -46,3 +48,11 @@ Processing entity "models\entities\Users_groups"
 
 Entity classes generated to/path/to/codeigniter/application
 ```
+
+## Reference
+
+* [Composer Installation](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
+* [CodeIgniter](https://github.com/bcit-ci/CodeIgniter)
+* [Documentation CodeIgniter](https://codeigniter.com/user_guide/)
+* [Doctrine 2 ORM](https://github.com/doctrine/doctrine2)
+* [Documentation Doctrine 2](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/index.html)
