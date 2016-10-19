@@ -22,7 +22,7 @@ $ composer install
 
 ## How to change project
 
-* Permission 777 folder /path/to/codeigniter/application/Proxies
+* Create folder and define permission 777 /path/to/codeigniter/application/Proxies
 
 * Change file /path/to/codeigniter/application/autoload.php
 
