@@ -43,4 +43,6 @@ If sucess return generating code entity
 Processing entity "models\entities\Groups"
 Processing entity "models\entities\Users"
 Processing entity "models\entities\Users_groups"
+
+Entity classes generated to/path/to/codeigniter/application
 ```

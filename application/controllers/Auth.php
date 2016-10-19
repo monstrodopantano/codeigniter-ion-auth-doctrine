@@ -271,7 +271,7 @@ class Auth extends CI_Controller {
 				$this->data['new_password'] = array(
 					'name' => 'new',
 					'id'   => 'new',
-                    'type' => 'password',
+				'type' => 'password',
 					'pattern' => '^.{'.$this->data['min_password_length'].'}.*$',
 				);
 				$this->data['new_password_confirm'] = array(
@@ -619,25 +619,25 @@ class Auth extends CI_Controller {
 			'name'  => 'first_name',
 			'id'    => 'first_name',
 			'type'  => 'text',
-			'value' => $this->form_validation->set_value('first_name', $user->first_name),
+			'value' => $this->form_validation->set_value('first_name', $this->config->item('use_doctrine', 'ion_auth') ? $user->getFirstName() : $user->first_name),
 		);
 		$this->data['last_name'] = array(
 			'name'  => 'last_name',
 			'id'    => 'last_name',
 			'type'  => 'text',
-			'value' => $this->form_validation->set_value('last_name', $user->last_name),
+			'value' => $this->form_validation->set_value('last_name', $this->config->item('use_doctrine', 'ion_auth') ? $user->getLastName() : $user->last_name),
 		);
 		$this->data['company'] = array(
 			'name'  => 'company',
 			'id'    => 'company',
 			'type'  => 'text',
-			'value' => $this->form_validation->set_value('company', $user->company),
+			'value' => $this->form_validation->set_value('company', $this->config->item('use_doctrine', 'ion_auth') ? $user->getCompany() : $user->company),
 		);
 		$this->data['phone'] = array(
 			'name'  => 'phone',
 			'id'    => 'phone',
 			'type'  => 'text',
-			'value' => $this->form_validation->set_value('phone', $user->phone),
+			'value' => $this->form_validation->set_value('phone', $this->config->item('use_doctrine', 'ion_auth') ? $user->getPhone() : $user->phone),
 		);
 		$this->data['password'] = array(
 			'name' => 'password',
@@ -755,13 +755,13 @@ class Auth extends CI_Controller {
 			'name'  => 'group_name',
 			'id'    => 'group_name',
 			'type'  => 'text',
-			'value' => $this->form_validation->set_value('group_name', $group->name),
+			'value' => $this->form_validation->set_value('group_name', $this->config->item('use_doctrine', 'ion_auth') ? $group->getName() : $group->name),
 		);
 		$this->data['group_description'] = array(
 			'name'  => 'group_description',
 			'id'    => 'group_description',
 			'type'  => 'text',
-			'value' => $this->form_validation->set_value('group_description', $group->description),
+			'value' => $this->form_validation->set_value('group_description', $this->config->item('use_doctrine', 'ion_auth') ? $group->getDescription() : $group->description),
 		);
 
 		$this->_render_page('auth/edit_group', $this->data);
